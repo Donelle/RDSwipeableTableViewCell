@@ -130,6 +130,9 @@ typedef enum {
                 {
                     return;
                 }
+                
+                if (revealDirection == RDSwipeableTableViewCellRevealDirectionNone)
+                    revealDirection = prevSwipeDirection == SwipeDirectionLeft ? RDSwipeableTableViewCellRevealDirectionLeft : RDSwipeableTableViewCellRevealDirectionRight;
             } else {
                 //
                 // Make sure we requested to handle this kind of swipe
